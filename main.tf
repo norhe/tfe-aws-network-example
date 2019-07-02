@@ -1,4 +1,4 @@
-provider "aws"{
+provider "aws" {
   region = "${var.region}"
 }
 
@@ -18,7 +18,7 @@ module "vpc" {
   enable_nat_gateway   = true
   enable_vpn_gateway   = true
 
-  tags {
+  tags = {
     Terraform   = "true"
     Environment = "dev"
   }
